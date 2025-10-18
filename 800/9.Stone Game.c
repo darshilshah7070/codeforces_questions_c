@@ -1,7 +1,11 @@
 /*https://codeforces.com/problemset/problem/1538/A*/
 
 #include <stdio.h>
-
+#include <stdlib.h>
+int min(int a,int b){
+    if(a<b)return a;
+    else return b;
+}
 int main(){
     int t=1;
     scanf("%d",&t);
@@ -19,25 +23,42 @@ int main(){
             if(x<mini){mini=x;mini_i=i;}
             a[i]=x;
         }
-        int mid=n/2+(n&1);
-        int ans=0;
-        if(maxi_i<=mid && mini_i<=mid){
-            ans=(maxi_i>mini_i)?maxi_i:mini_i;
-        }
-        else if(maxi_i>=mid && mini_i>=mid){
-            maxi_i=n-maxi_i+1;
-            mini_i=n-mini_i+1;
-            ans=(maxi_i>mini_i)?maxi_i:mini_i;
-        }
-        else{
-            if(maxi_i>mid) maxi_i=n-maxi_i+1;
-            if(mini_i>mid)mini_i=n-mini_i+1;
-            ans=maxi_i+mini_i;
-        }
-        // printf("%d %d %d %d ",maxi,mini,maxi_i,mini_i );
-        ans=(ans>(mid+1))?(mid+1):ans;
-        // else ans=(ans>(mid+1))?(mid+1):ans;
-        printf("%d\n",ans);
 
-    }
+        int ans1=0,ans2=0,ans3=0,ans4=0;
+        int temp1=0,temp2=0;
+        for(int i=1;i<=n;i++){
+            if(a[i]==mini){ans1++;break;}
+            else ans1++;
+        }
+        for(int i=n;i>=1;i--){
+            if(a[i]==maxi){ans1++;break;}
+            else ans1++;
+        }
+        for(int i=1;i<=n;i++){
+            if(a[i]==maxi){ans2++;break;}
+            else ans2++;
+        }
+        for(int i=n;i>=1;i--){
+            if(a[i]==mini){ans2++;break;}
+            else ans2++;
+        }
+         for(int i=1;i<=n;i++){
+            if(temp1 && temp2)break;
+            if(a[i]==mini){ans3++;temp1++;}
+            else if (a[i]==maxi){ans3++;temp2++;}
+            else ans3++;
+        }
+        temp1=0;temp2=0;
+        for(int i=n;i>=1;i--){
+            if(temp1 && temp2)break;
+            if(a[i]==mini){ans4++;temp1++;}
+            else if (a[i]==maxi){ans4++;temp2++;}
+            else ans4++;
+        }
+    int ans = (ans1 < ans2 ? ans1 : ans2);
+    ans = (ans < ans3 ? ans : ans3);
+    ans = (ans < ans4? ans : ans4);
+    printf("%d\n",ans);
+        
+}
 }
