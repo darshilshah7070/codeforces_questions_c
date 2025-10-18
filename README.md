@@ -9,7 +9,7 @@ This repository contains my **C language solutions** to problems from the **C2 L
 
 - **Language:** C (strictly no C++ STL — everything is implemented manually)
 - **Platform:** [Codeforces](https://codeforces.com/)
-- **Ladder:** C2 Ladder (from [Codeforces Ladder Collection](https://codeforces.com/blog/entry/74684) or similar)
+- **Ladder:** C2 Ladder (from [Codeforces Ladder Collection](https://c2-ladders-juol.onrender.com/))
 - **Goal:** Build a solid foundation in problem-solving and algorithm design.
 
 ---
