@@ -1,1 +1,0 @@
-{"name":"Local: 3","url":"/media/ssd/My_Website/codeforces_questions_c/800/3.Arithmetic Array.c","tests":[{"id":1760774709801,"input":"4\n3\n1 1 1\n2\n1 2\n4\n8 4 6 2\n1\n-2\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/media/ssd/My_Website/codeforces_questions_c/800/3.Arithmetic Array.c","group":"local","local":true}

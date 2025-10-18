@@ -1,1 +1,0 @@
-{"name":"Local: 6","url":"/media/ssd/My_Website/codeforces_questions_c/800/6.Do Not Be Distracted!.c","tests":[{"id":1760779197719,"input":"5\n3\nABA\n11\nDDBBCCCBBEZ\n7\nFFGZZZY\n1\nZ\n2\nAB\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/media/ssd/My_Website/codeforces_questions_c/800/6.Do Not Be Distracted!.c","group":"local","local":true}
